@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style=" background-color: aquamarine;">
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;          
+            margin: 0;
+            font-family: Verdana, sans-serif;
+        }
+
+        /* กรอบ Login Container แนวตั้ง */
+        .login-container {
+            width: 350px;            
+            background-color: #f0f8ff; 
+            border: 2px solid #a74b4c; 
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;  
+            align-items: center;
+            padding: 30px 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .login-container img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .login-container input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 1px solid #a74b4c;
+            border-radius: 5px;
+        }
+
+        /* ปุ่ม Login + Sign In เรียงแนวนอน */
+        .button-row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+            margin-top: 20px;
+        }
+
+        .button-row button {
+            flex: 1; /* ขยายเท่ากัน */
+            padding: 12px 0;
+            font-size: 16px;
+            border: 2px solid #a74b4c;
+            border-radius: 5px;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .button-row button:hover {
+            background-color: rgb(35, 34, 34);
+            color: rgb(242, 215, 140);
+        }
+
+        /* ปุ่มสามารถรองรับข้อความยาว */
+        .button-row button span {
+            white-space: nowrap;
+        }
+                .social-login {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center; /* สำคัญ! ป้องกันรูปถูกบีบแนวตั้ง */
+        }
+
+        .social-login img {
+            width: 30px;   /* กำหนดขนาดคงที่ */
+            height: auto;  /* ปรับสัดส่วนอัตโนมัติ */
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="test yujio.png" alt="Logo">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <div class="button-row">
+            <button><span>Login</span></button>
+            <button><span>Sign In</span></button>
+        </div>
+        <div class="social-login">
+        <img src="Google__G__logo.svg.webp" alt="Google Logo">
+        <img src="X_icon_-_Gray.svg.png" alt="Twitter Logo">
+        <img src="Facebook_f_logo_(2019).svg.png" alt="Facebook Logo">
+    </div>
+    </div>
+</body>
+</html>
