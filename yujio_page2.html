@@ -1,62 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(160, 233, 208);">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yujio Studio</title>
-  <link rel="icon" href="marisaicon2.png" type="image/png" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yujio Studio</title>
+    <link rel="icon" href="marisaicon2.png" type="image/png">
 
-  <style>
-    .pagination {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-    }
-    .page-link {
-      font-family: Arial, sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      color: black;
-      text-decoration: none;
-      padding: 8px 16px;
-      border: 2px solid rgb(175, 75, 76);
-      border-radius: 6px;
-      background-color: rgb(151, 249, 245);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .page-link:hover {
-      background-color: rgb(35, 34, 34);
-      color: rgb(242, 215, 140);
-      cursor: pointer;
-    }
-    .page-link.active {
-      background-color: rgb(242, 215, 140);
-      color: black;
-      border-color: rgb(120, 50, 50);
-    }
-    .page-link.disabled {
-      background-color: rgb(200, 200, 200);
-      color: gray;
-      border-color: gray;
-      pointer-events: none; 
-    }
-  </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        .navbar-nav .nav-link.left-menu {
+            color: rgb(160, 233, 208) !important;
+        }
+        .navbar-nav .nav-link.left-menu:hover {
+            color: rgb(242, 215, 140) !important;
+        }
+        .navbar-nav .dropdown-menu {
+            background-color: rgb(217, 237, 230); 
+        }
+        .navbar-nav .dropdown-menu .dropdown-item {
+            color: rgb(55, 121, 119); 
+        }
+        .navbar-nav .dropdown-menu .dropdown-item:hover {
+            background-color: rgb(15, 58, 56); 
+            color: rgb(242, 215, 140);
+        }
+        a.custom-link {
+            font-family: Arial;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 2px solid rgb(242, 215, 140);
+            border-radius: 4px;
+            background-color: rgb(68, 188, 185);
+            transition: background-color 0.5s, color 0.3s;
+            display: inline-block;
+        }
+        a.custom-link:hover {
+            background-color: rgb(35, 34, 34);
+            color: rgb(242, 215, 140);
+        }
+        .custom-search-btn {
+            background-color: rgb(68, 188, 185);
+            border: 2px solid rgb(242, 215, 140);
+            color: black;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background-color 0.5s, color 0.3s;
+        }
+        .custom-search-btn:hover {
+            background-color: rgb(35, 34, 34);
+            color: rgb(242, 215, 140);
+        }
+
+        .footer {
+            color: rgba(95, 217, 213, 0.8);
+            background-color: rgb(27, 81, 84);
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .footer-logo {
+            margin-top: 10px;         
+            text-align: center;         
+        }
+
+        .footer-logo img {
+            width: 40px;                
+            height: auto;              
+        }
+
+
+        body {
+            background-color: rgb(160, 233, 208);
+        }
+    </style>
 </head>
 <body>
-  <div class="pagination">
-    <!-- ปุ่มก่อนหน้า กลับไป index.html -->
-    <a class="page-link" href="index.html">Prev</a>
-    
-    <!-- เลขหน้า -->
-    <a class="page-link" href="index.html">1</a>
-    <a class="page-link active" href="#">2</a>
-    <a class="page-link" href="page3.html">3</a>
-    <a class="page-link" href="page4.html">4</a>
-    
-    <!-- ปุ่มถัดไป ไป page3.html -->
-    <a class="page-link" href="page3.html">Next</a>
-  </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(27, 81, 84); 
+    padding-left: 10px; padding-right: 10px;border: 2px solid rgb(242, 215, 140);">
+        <a class="navbar-brand" href="index.html">Home</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link left-menu" href="#">Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link left-menu" href="yujio_profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link left-menu" href="yujio_page2.html">Post</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link left-menu dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another</a>
+                        <a class="dropdown-item" href="#">Something else</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <form class="form-inline my-2 my-lg-0 mr-2">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="custom-search-btn" type="submit">Search</button>
+                </form>
+                <a href="yujio_login.html" class="custom-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+   
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
